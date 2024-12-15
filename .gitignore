@@ -1,4 +1,6 @@
-# Don't push local data
+.vscode
+
+# Don't push local data dir
 data
 misc
 

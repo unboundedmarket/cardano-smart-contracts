@@ -6,19 +6,28 @@ This is a dataset of various Cardano smart contracts.
 
 To pull or update the dataset, clone the repository and run `bash scripts/pull_and_update_data.sh`
 
-You can expand the dataset, by adding the url to `repositories.csv`
+You can expand the dataset, by adding the url of a new repository to `repositories.csv` and then calling `bash scripts/pull_and_update_data.sh`.
 
-## Data Sources
+After pulling the data, you can obtain basic information about the contracts in the dataset by calling `python scripts/data_stats.py`
+
+## Data
+
+Total Repostories: 40  
+Total Files: 1614  
+Total Filtered Files after filtering: 762  
 
 ### Aiken
 
+Total repostories: 14  
+Total files: 277  
+
+#### Sources
 
 https://github.com/SundaeSwap-finance/sundae-contracts.git  
 https://github.com/PaimaStudios/paima-engine.git  
 https://github.com/fallen-icarus/cardano-swaps.git  
 https://github.com/minswap/minswap-stableswap.git  
 https://github.com/Cornucopias/mint-contract.git  
-https://github.com/lenfiLabs/lenfi-smart-contracts.git  
 https://github.com/fallen-icarus/cardano-loans.git  
 https://github.com/spacebudz/nebula.git  
 https://github.com/fallen-icarus/cardano-options.git  
@@ -30,6 +39,11 @@ https://github.com/minswap/minswap-lbe-v2.git
 https://github.com/minswap/minswap-dex-v2.git  
 
 ### Plutus & Friends
+
+Total repostories: 21  
+Total files: 1008 
+
+#### Sources
 
 https://github.com/IndigoProtocol/indigo-smart-contracts.git  
 https://github.com/MuesliSwapTeam/muesliswap-cardano-contracts.git  
@@ -54,6 +68,11 @@ https://github.com/jpg-store/contract-v2.git
 https://github.com/metadex-fi/euclid-plutarch.git  
 
 ### Opshin
+
+Total repostories: 5  
+Total files: 329  
+
+#### Sources
 
 https://github.com/cardano-apexpool/opshin-smart-contract-examples.git  
 https://github.com/STEAKProtocol/STEAKProtocol.git  

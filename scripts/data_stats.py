@@ -31,6 +31,7 @@ def process_language_directory(lang_dir: str, lang: str, filter_keywords: dict) 
         dict: Dict with filtered file counts and sets.
     """
     lang_code_files = set()
+    language_repositories = set([f"data/{lang}" + dir for dir in os.listdir(lang_dir)])
     for root, _, files in os.walk(lang_dir):
         for file_name in files:
             if file_name.endswith("." + lang):
@@ -49,6 +50,7 @@ def process_language_directory(lang_dir: str, lang: str, filter_keywords: dict) 
     removed_files_count = len(total_removed_files)
 
     print(f"Language: {lang}")
+    print(f"  Total repositories: {len(language_repositories)}")
     print(f"  Total code files: {len(lang_code_files)}")
     for category, files in categorized_files.items():
         print(f"  {category.capitalize()} files: {len(files)}")
@@ -61,6 +63,7 @@ def process_language_directory(lang_dir: str, lang: str, filter_keywords: dict) 
     return {
         "code_files": lang_code_files,
         "filtered_code_files": lang_filtered_code_files,
+        "repositories": language_repositories,
         **categorized_files,
     }
 
@@ -77,7 +80,11 @@ def process_contracts_in_directory(dir_base_path: str, filter_keywords: dict) ->
         return
 
     # Initialize overall counters
-    all_files = {"code_files": set(), "filtered_code_files": set()}
+    all_files = {
+        "code_files": set(),
+        "filtered_code_files": set(),
+        "repositories": set(),
+    }
     for category in filter_keywords:
         all_files[category] = set()
 
@@ -93,6 +100,7 @@ def process_contracts_in_directory(dir_base_path: str, filter_keywords: dict) ->
 
     # Log overall results
     print("Overall Statistics:")
+    print(f"Total repositories: {len(all_files['repositories'])}")
     print(f"  Total code files: {len(all_files['code_files'])}")
     for category in filter_keywords:
         print(f"  Total {category.capitalize()} files: {len(all_files[category])}")
