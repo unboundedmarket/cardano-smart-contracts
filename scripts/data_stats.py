@@ -119,6 +119,7 @@ def main():
         "config": {"config", "cfg"},
         "offchain": {"offchain"},
         "blueprint": {"blueprint"},
+        "helper": {"helper"},
     }
     process_contracts_in_directory(data_dir, filter_keywords)
 

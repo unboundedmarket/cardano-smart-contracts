@@ -1,25 +1,28 @@
 # Cardano Smart Contracts
 
-This is a dataset of various Cardano smart contracts.
+This dataset showcases a collection of Cardano smart contracts. Are we missing an important repository? Let us know and help us expand the dataset!
 
 ## Usage
 
+### Pulling the dataset
+
 To pull or update the dataset, clone the repository and run `bash scripts/pull_and_update_data.sh`
+
+### Extending the dataset
 
 You can expand the dataset, by adding the url of a new repository to `repositories.csv` and then calling `bash scripts/pull_and_update_data.sh`.
 
-After pulling the data, you can obtain basic information about the contracts in the dataset by calling `python scripts/data_stats.py`
+### Filter contracts
+
+After pulling the data, you can obtain basic information about the contracts in the dataset by calling `python scripts/data_stats.py`. The script will filter the data based on specifc keywords, e.g., to exclude utility and helper files. You can modify the list of keywords to filter data based on your needs.
 
 ## Data
 
 Total Repostories: 40  
-Total Files: 1614  
-Total Filtered Files after filtering: 762  
 
 ### Aiken
 
 Total repostories: 14  
-Total files: 277  
 
 #### Sources
 
@@ -41,7 +44,6 @@ https://github.com/minswap/minswap-dex-v2.git
 ### Plutus & Friends
 
 Total repostories: 21  
-Total files: 1008 
 
 #### Sources
 
@@ -67,10 +69,9 @@ https://github.com/IntersectMBO/plutus-apps.git
 https://github.com/jpg-store/contract-v2.git  
 https://github.com/metadex-fi/euclid-plutarch.git  
 
-### Opshin
+### OpShin
 
 Total repostories: 5  
-Total files: 329  
 
 #### Sources
 
